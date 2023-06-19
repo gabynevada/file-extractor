@@ -2,7 +2,7 @@ name: Release
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build:
@@ -52,4 +52,3 @@ jobs:
         with:
           file: ./publish/file-extractor-${{ runner.runtime }}.${{ runner.os == 'Windows' && 'zip' || 'tar.gz' }}
           tags: true
-          draft: true
