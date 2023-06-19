@@ -15,7 +15,7 @@ jobs:
           - os: ubuntu-latest
             runtime: linux-x64
           - os: macos-latest
-            runtime: osx.12-x64
+            runtime: osx-x64
         dotnet: ['8.x']
     steps:
       - uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
           dotnet-version: ${{ matrix.dotnet }}
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore --runtime ${{ matrix.runtime }}
 
       - name: Build
         run: dotnet build --no-restore
