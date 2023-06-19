@@ -38,17 +38,17 @@ jobs:
         if: runner.os == 'Windows'
         run: |
           choco install 7zip
-          & 'C:\Program Files\7-Zip\7z.exe' a -tzip ./publish/file-extractor-${{ runner.runtime }}.zip ./artifacts/publish/FileExtractor.CLI/*
+          & 'C:\Program Files\7-Zip\7z.exe' a -tzip ./publish/file-extractor-${{ runner.runtime }}.zip ./artifacts/publish/FileExtractor.CLI/release_${{ matrix.runtime }}/*
 
       - name: Zip Artifacts (Linux and macOS)
         if: runner.os != 'Windows'
         run: |
-          tar -czvf ./publish/file-extractor-${{ runner.runtime }}.tar.gz -C ./artifacts/publish/FileExtractor.CLI/release_${{ runner.runtime }} .
+          tar -czvf ./publish/file-extractor-${{ matrix.runtime }}.tar.gz -C ./artifacts/publish/FileExtractor.CLI/release_${{ matrix.runtime }}
 
       - name: Upload Release Asset
         uses: xresloader/upload-to-github-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: ./publish/file-extractor-${{ runner.runtime }}.${{ runner.os == 'Windows' && 'zip' || 'tar.gz' }}
+          file: ./publish/file-extractor-${{ matrix.runtime }}.${{ runner.os == 'Windows' && 'zip' || 'tar.gz' }}
           tags: true
