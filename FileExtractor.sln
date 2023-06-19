@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7832FC90-9CE6-405D-8054-8657A6274848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileExtractor.CLI", "src\FileExtractor.CLI\FileExtractor.CLI.csproj", "{9526453B-0314-46A5-9566-0F83E3010BB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9526453B-0314-46A5-9566-0F83E3010BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9526453B-0314-46A5-9566-0F83E3010BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9526453B-0314-46A5-9566-0F83E3010BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9526453B-0314-46A5-9566-0F83E3010BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9526453B-0314-46A5-9566-0F83E3010BB5} = {7832FC90-9CE6-405D-8054-8657A6274848}
+	EndGlobalSection
+EndGlobal
