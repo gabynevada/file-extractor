@@ -9,11 +9,11 @@
 
   <PropertyGroup>
     <Nullable>enable</Nullable>
-    <Version>0.1.0</Version>
+    <Version>0.1.8</Version>
     <PackageVersion>$(Version)</PackageVersion>
     <Authors>Elvis Nieves Miranda</Authors>
     <PackageTags>file;extractor;extracting;decompress</PackageTags>
-    <RepositoryUrl>https://github.com/DeptSaludPR/Biomatch</RepositoryUrl>
+    <RepositoryUrl>https://github.com/gabynevada/file-extractor</RepositoryUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <EnablePackageValidation>true</EnablePackageValidation>
     <IncludeSymbols>true</IncludeSymbols>
