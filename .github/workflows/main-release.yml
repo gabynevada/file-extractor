@@ -50,5 +50,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: ./publish/file-extractor-${{ matrix.runtime }}.${{ runner.os == 'Windows' && 'zip' || 'tar.gz' }}
+          file: ./artifacts/publish/FileExtractor.CLI/file-extractor-${{ matrix.runtime }}.${{ runner.os == 'Windows' && 'zip' || 'tar.gz' }}
           tags: true
